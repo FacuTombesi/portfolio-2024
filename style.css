@@ -10,6 +10,7 @@ html {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   background-color: #EFEFEF;
+  color: #1E2022;
 }
 
 nav {
@@ -29,13 +30,19 @@ nav img {
   height: 60px;
 }
 
+nav .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
 nav ul {
   display: flex;
   gap: 40px;
 }
 
 nav button {
-  color: #1E2022;
   background-color: transparent;
   padding: 12px 16px;
   border-radius: 5px;
@@ -45,6 +52,7 @@ nav button {
 }
 
 nav button:hover {
+  font-weight: bold;
   color: #EFEFEF;
   background-color: #5400CF;
 }
@@ -59,7 +67,6 @@ nav button#menuButton {
 
 a {
   text-decoration: none;
-  color: #1E2022;
   transition: color 0.3s ease;
 }
 
@@ -73,6 +80,58 @@ h5 {
 
 li {
   list-style: none;
+}
+
+.home {
+  padding: 90px 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.home .left img {
+  width: 300px;
+}
+
+.home .right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.home .right h3 {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 46px;
+}
+
+.home .right h3 span {
+  color: #5400CF;
+}
+
+.home .right p {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.home .right .home-buttons {
+  margin-top: 40px;
+}
+
+.home .right button {
+  color: #EFEFEF;
+  background-color: #5400CF;
+  margin-right: 10px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home .right button:hover {
+  background-color: #3a0091;
 }
 
 /*
