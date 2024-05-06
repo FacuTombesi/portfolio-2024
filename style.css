@@ -82,6 +82,10 @@ li {
   list-style: none;
 }
 
+hr {
+  margin-top: 10px;
+}
+
 .home {
   padding: 90px 85px;
   display: flex;
@@ -91,6 +95,8 @@ li {
 }
 
 .home .left img {
+  background-color: #f2e9ff;
+  border-radius: 5px;
   width: 300px;
 }
 
@@ -104,10 +110,6 @@ li {
   margin-top: 10px;
   font-weight: bold;
   font-size: 46px;
-}
-
-.home hr {
-  margin-top: 10px;
 }
 
 .home .right h3 span {
@@ -144,21 +146,51 @@ li {
   margin-top: 10px;
 }
 
-.skills {
-  padding: 110px 85px 0;
-  margin-bottom: 900px;
+.about {
+  background-color: #f0e9fa;
+  padding: 110px 85px;
 }
 
-.skills hr {
-  margin-top: 10px;
+.about .about-me {
+  background-color: transparent;
+}
+
+.about .about-me h5 {
+  background-color: transparent;
+}
+
+.about .about-me p {
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 28px;
+  margin-top: 30px;
+}
+
+.about .about-me button {
+  color: #EFEFEF;
+  background-color: #5400CF;
+  margin-top: 30px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about .about-me button:hover {
+  background-color: #3a0091;
+}
+
+.skills {
+  padding: 110px 85px 0;
 }
 
 .skills .skills-items {
   display: grid;
-  grid-template-columns: repeat(5, 250px);
+  grid-template-columns: repeat(5, 1fr);
   margin-top: 30px;
   margin-bottom: 50px;
-  grid-gap: 20px;
+  grid-gap: 10px;
 }
 
 .skills .skills-items img {
