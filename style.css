@@ -21,13 +21,12 @@ nav {
   justify-content: space-between;
   height: 80px;
   top: 0;
-  padding: 0 50px;
+  padding: 0 85px;
   box-shadow: 0 5px 50px rgba(0, 0, 0, 0.025);
 }
 
 nav img {
-  width: 60px;
-  height: 60px;
+  height: 40px;
 }
 
 nav .nav-links {
@@ -43,6 +42,7 @@ nav ul {
 }
 
 nav button {
+  display: none;
   background-color: transparent;
   padding: 12px 16px;
   border-radius: 5px;
@@ -292,6 +292,53 @@ hr {
 
 .projects .projects-items .project .info a i {
   margin-left: 2px;
+}
+
+footer .logo {
+  display: flex;
+  align-items: center;
+}
+
+footer .logo img {
+  width: 40px;
+  height: 40px;
+}
+
+footer ul {
+  display: flex;
+  gap: 40px;
+}
+
+footer {
+  padding: 40px 85px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .social-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+footer .social-links img {
+  width: 20px;
+  height: 20px;
+  transition: 0.3s ease;
+}
+
+footer .social-links img:hover[src*="iconGITHUB(black)"] {
+  width: 20px;
+  height: 20px;
+  content: url('assets/icons/iconGITHUB\(purple\).png');
+}
+
+footer .social-links img:hover[src*="iconLINKEDIN(black)"] {
+  width: 20px;
+  height: 20px;
+  content: url('assets/icons/iconLINKEDIN\(purple\).png');
 }
 
 /*
