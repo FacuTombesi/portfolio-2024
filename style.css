@@ -52,7 +52,6 @@ nav button {
 }
 
 nav button:hover {
-  font-weight: bold;
   color: #EFEFEF;
   background-color: #5400CF;
 }
@@ -63,6 +62,14 @@ nav button#menuButton {
   justify-content: center;
   font-size: 24px;
   padding: 7px;
+}
+
+nav button i {
+  transition: all 0.3s ease;
+}
+
+nav button i:hover {
+  color: #EFEFEF;
 }
 
 a {
@@ -150,6 +157,13 @@ hr {
   padding: 110px 85px;
 }
 
+.about .about-me h5 span,
+.skills h5 span,
+.projects .header .info h5 span {
+  color: #E000E0;
+  font-weight: bolder;
+}
+
 .about .about-me p {
   font-size: 16px;
   line-height: 28px;
@@ -215,24 +229,7 @@ hr {
 }
 
 .projects .header .info-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.projects .header .info-link button {
-  color: #EFEFEF;
-  background-color: #5400CF;
-  margin-top: 30px;
-  padding: 8px 16px;
-  border-radius: 5px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.projects .header .info-link button:hover {
-  background-color: #3a0091;
+  margin-top: 25px;
 }
 
 .projects .projects-items {
@@ -243,7 +240,6 @@ hr {
 
 .projects .projects-items .project {
   width: 22%;
-  height: 480px;
   background-color: #EFEFEF;
   border-radius: 5px;
   border-bottom: 3px solid transparent;
@@ -274,6 +270,10 @@ hr {
 .projects .projects-items .project .info p {
   font-size: 13px;
   line-height: 18px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .projects .projects-items .project .info .info-links {
@@ -339,6 +339,134 @@ footer .social-links img:hover[src*="iconLINKEDIN(black)"] {
   width: 20px;
   height: 20px;
   content: url('assets/icons/iconLINKEDIN\(purple\).png');
+}
+
+@media screen and (max-width: 1200px) {
+  .home .right h5 {
+    font-size: 18px;
+  }
+
+  .home .right h3 {
+    font-size: 36px;
+  }
+
+  .about .about-me p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 30px;
+  }
+
+  .skills .skills-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills .skills-items .skill {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .projects .projects-items {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .projects .projects-items .project {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 0 42px;
+  }
+
+  nav img {
+    content: url('assets/img/logo_ft.png');
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav.open .logo {
+    display: none;
+  }
+
+  nav.open ul {
+    display: flex;
+  }
+
+  nav button#menuButton {
+    display: flex;
+  }
+
+  .home {
+    padding: 45px 85px;
+    flex-direction: column-reverse;
+  }
+
+  .projects .projects-items .project {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    height: 60px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .home .right h5 {
+    font-size: 14px;
+  }
+
+  .home .right h3 {
+    font-size: 32px;
+  }
+
+  .home .right .home-buttons {
+    margin: 20px 0;
+  }
+
+  .skills .skills-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects .projects-items {
+    gap: 10px;
+  }
+
+  .projects .projects-items .project img {
+    height: 160px;
+  }
+
+  .projects .projects-items .project .info h4 {
+    font-size: 14px;
+    height: 30px;
+  }
+
+  .projects .projects-items .project .info p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .projects .projects-items .project .info .info-links a {
+    font-size: 10px;
+  }
+
+  .projects .projects-items .project .info a i {
+    display: none;
+  }
+
+  footer ul {
+    display: none;
+  }
 }
 
 /*
