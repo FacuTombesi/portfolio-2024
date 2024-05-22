@@ -29,7 +29,7 @@ nav img {
   height: 40px;
 }
 
-nav .nav-links {
+.nav-links {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -94,45 +94,45 @@ hr {
 }
 
 .home {
-  padding: 150px 450px;
+  padding: 150px 350px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
 }
 
-.home .left img {
+.left img {
   background-color: #f2e9ff;
-  border-radius: 5px;
+  border-radius: 50px;
   width: 300px;
 }
 
-.home .right {
+.right {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 
-.home .right h3 {
+.right h3 {
   margin-top: 10px;
   font-weight: bold;
   font-size: 46px;
 }
 
-.home .right h3 span {
+.right h3 span {
   color: #5400CF;
 }
 
-.home .right p {
+.right p {
   font-size: 22px;
   margin-top: 20px;
 }
 
-.home .right .home-buttons {
+.home-buttons {
   margin-top: 40px;
 }
 
-.home .right button {
+.right button {
   color: #EFEFEF;
   background-color: #5400CF;
   margin-right: 10px;
@@ -143,11 +143,11 @@ hr {
   transition: all 0.3s ease;
 }
 
-.home .right button:hover {
+.right button:hover {
   background-color: #3a0091;
 }
 
-.projects .header h3 {
+.header h3 {
   font-size: 40px;
   margin-top: 10px;
 }
@@ -157,20 +157,20 @@ hr {
   padding: 110px 240px;
 }
 
-.about .about-me h5 span,
+.about-me h5 span,
 .skills h5 span,
-.projects .header .info h5 span {
+.info h5 span {
   color: #E000E0;
   font-weight: bolder;
 }
 
-.about .about-me p {
+.about-me p {
   font-size: 16px;
   line-height: 28px;
   margin-top: 30px;
 }
 
-.about .about-me button {
+.about-me button {
   color: #EFEFEF;
   background-color: #5400CF;
   margin-top: 30px;
@@ -181,7 +181,7 @@ hr {
   transition: all 0.3s ease;
 }
 
-.about .about-me button:hover {
+.about-me button:hover {
   background-color: #3a0091;
 }
 
@@ -189,7 +189,7 @@ hr {
   padding: 110px 240px;
 }
 
-.skills .skills-items {
+.skills-items {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin-top: 30px;
@@ -197,12 +197,12 @@ hr {
   grid-gap: 10px;
 }
 
-.skills .skills-items img {
+.skills-items img {
   width: 25px;
   margin-bottom: 5px;
 }
 
-.skills .skills-items .skill {
+.skill {
   width: 75%;
   border-radius: 5px;
   padding: 12px;
@@ -211,11 +211,11 @@ hr {
   transition: all 0.3s ease;
 }
 
-.skills .skills-items .skill:hover {
+.skill:hover {
   border-color: #5400CF;
 }
 
-.projects .projects-items .project .info h4 {
+.info h4 {
   font-size: 18px;
 }
 
@@ -224,35 +224,35 @@ hr {
   padding: 110px 240px;
 }
 
-.projects .header {
+.header {
   margin-bottom: 60px;
 }
 
-.projects .header .info-link {
+.info-link {
   margin-top: 25px;
 }
 
-.projects .projects-items {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+.projects-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-.projects .projects-items .project {
-  width: 22%;
+.project {
   background-color: #EFEFEF;
+  height: 420px;
   border-radius: 5px;
   border-bottom: 3px solid transparent;
-  cursor: pointer;
   box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
-.projects .projects-items .project:hover {
+.project:hover {
+  height: auto;
   border-color: #5400CF;
 }
 
-.projects .projects-items .project img {
+.project img {
   width: 100%;
   height: 240px;
   object-fit: cover;
@@ -260,38 +260,59 @@ hr {
   border-radius: 5px 5px 10px 10px;
 }
 
-.projects .projects-items .project .info {
+.project .info {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 20px 28px 28px;
 }
 
-.projects .projects-items .project .info p {
+.project .info p {
   font-size: 13px;
   line-height: 18px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  transition: all 0.5s ease;
 }
 
-.projects .projects-items .project .info .info-links {
+.project:hover .info p {
+  -webkit-line-clamp: unset;
+  display: block;
+}
+
+.info-links {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
 }
 
-.projects .projects-items .project .info a {
+.project .info a {
   text-decoration: underline;
   text-underline-offset: 10px;
   text-decoration-color: #5400CF;
   font-size: 14px;
 }
 
-.projects .projects-items .project .info a i {
+.project .info a i {
   margin-left: 2px;
+}
+
+.projects button {
+  color: #EFEFEF;
+  background-color: #5400CF;
+  margin-top: 30px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.projects button:hover {
+  background-color: #3a0091;
 }
 
 footer .logo {
@@ -317,25 +338,25 @@ footer {
   justify-content: space-between;
 }
 
-footer .social-links {
+.social-links {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-footer .social-links img {
+.social-links img {
   width: 20px;
   height: 20px;
   transition: 0.3s ease;
 }
 
-footer .social-links img:hover[src*="iconGITHUB(black)"] {
+.social-links img:hover[src*="iconGITHUB(black)"] {
   width: 20px;
   height: 20px;
   content: url('assets/icons/iconGITHUB\(purple\).png');
 }
 
-footer .social-links img:hover[src*="iconLINKEDIN(black)"] {
+.social-links img:hover[src*="iconLINKEDIN(black)"] {
   width: 20px;
   height: 20px;
   content: url('assets/icons/iconLINKEDIN\(purple\).png');
@@ -346,11 +367,11 @@ footer .social-links img:hover[src*="iconLINKEDIN(black)"] {
     padding: 45px 180px;
   }
 
-  .home .right h5 {
+  .right h5 {
     font-size: 18px;
   }
 
-  .home .right h3 {
+  .right h3 {
     font-size: 36px;
   }
 
@@ -358,7 +379,7 @@ footer .social-links img:hover[src*="iconLINKEDIN(black)"] {
     padding: 45px 85px;
   }
 
-  .about .about-me p {
+  .about-me p {
     font-size: 14px;
     line-height: 24px;
     margin-top: 30px;
@@ -368,11 +389,11 @@ footer .social-links img:hover[src*="iconLINKEDIN(black)"] {
     padding: 45px 85px;
   }
 
-  .skills .skills-items {
+  .skills-items {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .skills .skills-items .skill {
+  .skill {
     width: 75%;
     display: flex;
     align-items: center;
@@ -382,15 +403,6 @@ footer .social-links img:hover[src*="iconLINKEDIN(black)"] {
 
   .projects {
     padding: 45px 85px;
-  }
-
-  .projects .projects-items {
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-
-  .projects .projects-items .project {
-    width: 48%;
   }
 }
 
@@ -424,8 +436,8 @@ footer .social-links img:hover[src*="iconLINKEDIN(black)"] {
     flex-direction: column-reverse;
   }
 
-  .projects .projects-items .project {
-    width: 47%;
+  .projects-items {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -438,45 +450,45 @@ footer .social-links img:hover[src*="iconLINKEDIN(black)"] {
     font-size: 14px;
   }
 
-  .home .right h5 {
+  .right h5 {
     font-size: 14px;
   }
 
-  .home .right h3 {
+  .right h3 {
     font-size: 32px;
   }
 
-  .home .right .home-buttons {
+  .home-buttons {
     margin: 20px 0;
   }
 
-  .skills .skills-items {
+  .skills-items {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .projects .projects-items {
+  .projects-items {
     gap: 10px;
   }
 
-  .projects .projects-items .project img {
+  .project img {
     height: 160px;
   }
 
-  .projects .projects-items .project .info h4 {
+  .project .info h4 {
     font-size: 14px;
     height: 30px;
   }
 
-  .projects .projects-items .project .info p {
+  .project .info p {
     font-size: 12px;
     line-height: 16px;
   }
 
-  .projects .projects-items .project .info .info-links a {
+  .info-links a {
     font-size: 10px;
   }
 
-  .projects .projects-items .project .info a i {
+  .project .info a i {
     display: none;
   }
 
