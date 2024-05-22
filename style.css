@@ -520,6 +520,16 @@ form button:disabled {
 
   nav ul {
     display: none;
+    font-size: 12px;
+    gap: 30px;
+  }
+
+  nav button {
+    padding: 10px 12px;
+    border: transparent;
+    background-color: #5400CF;
+    color: #EFEFEF;
+    font-size: 12px;
   }
 
   nav.open .logo {
@@ -532,6 +542,8 @@ form button:disabled {
 
   nav button#menuButton {
     display: flex;
+    border: 1px solid #5400CF;
+    background-color: transparent;
   }
 
   .home {
@@ -565,7 +577,11 @@ form button:disabled {
   }
 
   nav ul li a {
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  nav button {
+    padding: 10px 12px;
   }
 
   .right h5 {
@@ -582,6 +598,10 @@ form button:disabled {
 
   .skills-items {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project {
+    height: 360px;
   }
 
   .projects-items {
