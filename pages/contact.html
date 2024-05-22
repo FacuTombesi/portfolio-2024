@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <title>FTombesi | Contact</title>
+</head>
+<body>
+  <nav>
+    <a href="https://ftportfolio.vercel.app/">
+      <img class="logo" src="../assets/img/logo_ft_full.png" alt="FTombesi" />
+    </a>
+    <div class="nav-links">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="projects.html">All Projects</a></li>
+      </ul>
+      <a href="/pages/contact.html">
+        <button>Contact me</button>
+      </a>
+    </div>
+    <button id="menuButton" onclick="openMenu()">
+      <i class='bx bx-menu'></i>
+    </button>
+  </nav>
+  <div class="form-container">
+    <div class="header">
+      <div class="info">
+        <h5>&lt;contact<span>/</span>&gt;</h5>
+        <hr color="#5400CF" width="10%" />
+      </div>
+    </div>
+    <form id="contact-form">
+      <div class="first-form-row">
+        <div class="input-container">
+          <label for="name">Name</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="subject">Subject</label>
+        <input class="form-input" type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea class="form-input" rows="5" id="message" name="message" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" id="submit-btn" disabled>Send</button>
+    </form>
+    <div id="alert" class="alert"></div>
+  </div>
+  <footer>
+    <div class="logo">
+      <a href="https://ftportfolio.vercel.app/">
+        <img src="../assets/img/logo_ft.png" alt="FTombesi" />
+      </a>
+    </div>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="projects.html">All Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/facundotombesi/" target="_blank" rel="noreferrer">
+        <img class="linkedin" src="../assets/icons/iconLINKEDIN(black).png" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/FacuTombesi" target="_blank" rel="noreferrer">
+        <img class="github" src="../assets/icons/iconGITHUB(black).png" alt="GitHub" />
+      </a>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript" src="../utils/sendMail.js"></script>
+</body>
+</html>

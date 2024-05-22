@@ -42,7 +42,6 @@ nav ul {
 }
 
 nav button {
-  display: none;
   background-color: transparent;
   padding: 12px 16px;
   border-radius: 5px;
@@ -331,7 +330,7 @@ footer ul {
 }
 
 footer {
-  padding: 40px 85px;
+  padding: 20px 85px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -360,6 +359,110 @@ footer {
   width: 20px;
   height: 20px;
   content: url('assets/icons/iconLINKEDIN\(purple\).png');
+}
+
+.form-container {
+  background-color: #f0e9fa;
+  min-height: 80vh;
+  padding: 110px 240px;
+}
+
+.first-form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  margin: 28px 0;
+}
+
+.input-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input, textarea {
+  background-color: #EFEFEF;
+  padding: 6px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input {
+  border: transparent;
+  border-top: 2px solid transparent;
+  border-bottom: 1px solid #5400CF;
+}
+
+textarea {
+  border: 1px solid #5400CF;
+  border-radius: 3px;
+}
+
+input:focus {
+  border-top: 1px solid transparent;
+  border-bottom: 2px solid #5400CF;
+}
+
+textarea:focus {
+  border: 2px solid #5400CF;
+}
+
+form button {
+  color: #EFEFEF;
+  background-color: #5400CF;
+  margin-top: 30px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #3a0091;
+}
+
+form button:disabled {
+  background-color: #cccccc;
+  color: #979797;
+  cursor: not-allowed;
+}
+
+.alert {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f2f2;
+  border-radius: 15px;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.error {
+  background-color: #f44336;
+  color: white;
 }
 
 @media screen and (max-width: 1200px) {
@@ -438,6 +541,21 @@ footer {
 
   .projects-items {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .form-container {
+    padding: 45px 85px;
+  }
+
+  .first-form-row {
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    align-items: unset;
+  }
+
+  .input-container {
+    width: 100%;
   }
 }
 
