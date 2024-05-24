@@ -465,11 +465,13 @@ form button:disabled {
   color: white;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
   .home {
     padding: 45px 180px;
   }
+}
 
+@media screen and (max-width: 1200px) {
   .right h5 {
     font-size: 18px;
   }
@@ -634,10 +636,3 @@ form button:disabled {
     display: none;
   }
 }
-
-/*
-black: #1E2022
-white: #EFEFEF
-purple: #5400CF
-pink: #E000E0
-*/
