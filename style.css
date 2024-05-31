@@ -101,7 +101,7 @@ hr {
 }
 
 .left img {
-  background-color: #f2e9ff;
+  filter: drop-shadow(10px 7px 10px #e0ccfd);
   border-radius: 50px;
   width: 300px;
 }
@@ -239,7 +239,7 @@ hr {
 
 .project {
   background-color: #EFEFEF;
-  height: 420px;
+  height: 460px;
   border-radius: 5px;
   border-bottom: 3px solid transparent;
   box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
@@ -266,6 +266,16 @@ hr {
   padding: 20px 28px 28px;
 }
 
+.project span {
+  font-size: 9px;
+  color: #E000E0;
+  border: 1px solid #E000E0;
+  border-radius: 10px;
+  padding: 2.5px;
+  width: 40%;
+  text-align: center;
+}
+
 .project .info p {
   font-size: 13px;
   line-height: 18px;
@@ -279,6 +289,21 @@ hr {
 .project:hover .info p {
   -webkit-line-clamp: unset;
   display: block;
+}
+
+.project ul {
+  display: none;
+}
+
+.project ul img {
+  width: 15px;
+  height: 15px;
+}
+
+.project:hover ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .info-links {
@@ -557,6 +582,26 @@ form button:disabled {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .project {
+    height: auto;
+  }
+
+  .project .info p {
+    -webkit-line-clamp: unset;
+    display: block;
+  }
+
+  .project .info span {
+    width: 20%;
+    font-size: 10px;
+  }
+
+  .project ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
   .form-container {
     padding: 45px 85px;
   }
@@ -600,10 +645,6 @@ form button:disabled {
 
   .skills-items {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .project {
-    height: 360px;
   }
 
   .projects-items {
