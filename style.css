@@ -320,9 +320,9 @@ hr {
   transition: all 0.3s ease;
 }
 
-/* .project ul .tech:hover .tech-name {
+.project ul .tech:hover .tech-name {
   display: block;
-} */
+}
 
 .info-links {
   display: flex;
