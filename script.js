@@ -6,30 +6,35 @@ function openMenu() {
   nav.classList.toggle("open");
 }
 
-/* --------------------- Slider --------------------- */
+/* --------------------- Scroll --------------------- */
 
-const slider = document.querySelector(".projects-items");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-let index = 0;
-const totalProjects = document.querySelectorAll(".project").length;
-const projectsPerPage = 3;
-const maxIndex = Math.ceil(totalProjects / projectsPerPage) - 1;
+const scrollContainer = document.querySelector('.projects-container');
 
-function updateSlider() {
-  slider.style.transform = `translateX(${-index * 100}%)`;
-}
+let isDown = false;
+let startX;
+let scrollLeft;
 
-nextBtn.addEventListener("click", () => {
-  if (index < maxIndex) {
-    index++;
-    updateSlider();
-  }
+scrollContainer.addEventListener('mousedown', (e) => {
+  isDown = true;
+  scrollContainer.classList.add('active');
+  startX = e.pageX - scrollContainer.offsetLeft;
+  scrollLeft = scrollContainer.scrollLeft;
 });
 
-prevBtn.addEventListener("click", () => {
-  if (index > 0) {
-    index--;
-    updateSlider();
-  }
+scrollContainer.addEventListener('mouseleave', () => {
+  isDown = false;
+  scrollContainer.classList.remove('active');
+});
+
+scrollContainer.addEventListener('mouseup', () => {
+  isDown = false;
+  scrollContainer.classList.remove('active');
+});
+
+scrollContainer.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - scrollContainer.offsetLeft;
+  const walk = (x - startX) * 2;
+  scrollContainer.scrollLeft = scrollLeft - walk;
 });
